@@ -1,3 +1,0 @@
-path: Declarations.yaml
-extension: yaml
-type: files
