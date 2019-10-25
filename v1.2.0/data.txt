@@ -1,3 +1,3 @@
-path: []
+path: https://github.com/dfalbel/declarations/releases/download/v1.2.0-1ed5832/Declarations.yaml
 extension: yaml
 type: files
