@@ -2,7 +2,3 @@
   name: v1.3.0
   extension: yaml
   type: files
-- path: $VERSION
-  name: $VERSION
-  extension: yaml
-  type: files
