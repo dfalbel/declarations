@@ -15,12 +15,18 @@ jobs:
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }}
     timeout-minutes: 30
+    env:
+      BRANCH: master
     steps:
       - uses: actions/checkout@v2
       - uses: s-weigand/setup-conda@v1
       - name: Install dependencies
         run: |
           conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
+      - name: Clone pytorch
+        run: |
+          git clone --recursive https://github.com/pytorch/pytorch --branch ${BRANCH} --single-branch
+          cd pytorch
       - name: Build
         run: |
           mkdir build_libtorch && cd build_libtorch

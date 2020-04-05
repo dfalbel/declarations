@@ -2,7 +2,7 @@
 
 if [[ "$VERSION" == "" ]]
 then
-  VERSION="v1.3.0"
+  VERSION="master"
 fi
 
 
