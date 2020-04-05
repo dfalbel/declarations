@@ -1,3 +1,0 @@
-path: https://github.com/dfalbel/declarations/releases/download/v1.3.0-ce66d76/Declarations.yaml
-extension: yaml
-type: files

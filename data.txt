@@ -1,8 +1,0 @@
-- path: v1.2.0
-  name: v1.2.0
-  extension: yaml
-  type: files
-- path: v1.3.0
-  name: v1.3.0
-  extension: yaml
-  type: files
