@@ -17,6 +17,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v2
+      - name: Include $CONDA in $PATH
+        run: echo ::add-path::$CONDA/condabin
       - name: Install dependencies
         run: |
           conda install numpy ninja pyyaml mkl mkl-include setuptools cmake cffi
