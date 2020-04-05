@@ -31,3 +31,13 @@ jobs:
           cd pytorch
           mkdir build_libtorch && cd build_libtorch
           python ../tools/build_libtorch.py
+      - name: Upload libtorch
+        uses: actions/upload-artifact@v1
+        with:
+          name: libtorch
+          path: pytorch/build_libtorch/build/lib
+      - name: Upload declarations.yaml
+        uses: actions/upload-artifact@v1
+        with:
+          name: declarations
+          path: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
