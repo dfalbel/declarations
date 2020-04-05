@@ -26,8 +26,8 @@ jobs:
       - name: Clone pytorch
         run: |
           git clone --recursive https://github.com/pytorch/pytorch --branch ${BRANCH} --single-branch
-          cd pytorch
       - name: Build
         run: |
+          cd pytorch
           mkdir build_libtorch && cd build_libtorch
           python ../tools/build_libtorch.py
