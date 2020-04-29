@@ -12,11 +12,12 @@ jobs:
       fail-fast: false
       matrix:
         os: ["macos-latest"]
+        branch: ["master", "v1.5"]
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }}
     timeout-minutes: 120
     env:
-      BRANCH: master
+      BRANCH: ${{ matrix.branch }}
     steps:
       - uses: actions/checkout@v2
       - uses: s-weigand/setup-conda@v1
@@ -39,5 +40,12 @@ jobs:
       - name: Upload declarations.yaml
         uses: actions/upload-artifact@v1
         with:
-          name: declarations
+          name: declarations-${{ matrix.branch }}
           path: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v1-release
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
+          tag: ${{ matrix.branch }}
+          overwrite: true       
