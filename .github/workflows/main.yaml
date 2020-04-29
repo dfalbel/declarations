@@ -12,7 +12,12 @@ jobs:
       fail-fast: false
       matrix:
         os: ["macos-latest"]
-        branch: ["master", "release/1.5"]
+        version: ["master", "v1.5"]
+        include:
+        - version: master
+          branch: master
+        - version: v1.5
+          branch: release/1.5
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }}
     timeout-minutes: 120
@@ -47,5 +52,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
-          tag: ${{ matrix.branch }}
+          tag: master
+          asset_name: ${{ matrix.version }}
           overwrite: true       
