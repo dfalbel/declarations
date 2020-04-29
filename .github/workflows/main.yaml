@@ -52,6 +52,6 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
-          tag: master
+          tag: declarations
           asset_name: Declarations-${{ matrix.version }}
           overwrite: true       
