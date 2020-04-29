@@ -45,7 +45,7 @@ jobs:
       - name: Upload declarations.yaml
         uses: actions/upload-artifact@v1
         with:
-          name: declarations-${{ matrix.branch }}
+          name: Declarations.yaml
           path: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
       - name: Upload to release
         uses: svenstaro/upload-release-action@v1-release
@@ -53,5 +53,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
           tag: master
-          asset_name: ${{ matrix.version }}
+          asset_name: Declarations-${{ matrix.version }}
           overwrite: true       
