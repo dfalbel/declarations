@@ -50,7 +50,7 @@ jobs:
       - name: Upload to release
         uses: svenstaro/upload-release-action@v1-release
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.PAT }}
           file: pytorch/build_libtorch/build/aten/src/ATen/Declarations.yaml
           tag: ${{ matrix.version }}
           overwrite: true       
