@@ -19,6 +19,8 @@ jobs:
           branch: master
         - version: v1.5
           branch: release/1.5
+        - version: v1.6
+          branch: release/1.6
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.os }}
     timeout-minutes: 120
