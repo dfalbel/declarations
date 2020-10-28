@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["macos-latest"]
-        version: ["master", "v1.5", "v1.6"]
+        version: ["master", "v1.5", "v1.6", "v1.7"]
         include:
         - version: master
           branch: master
