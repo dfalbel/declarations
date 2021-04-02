@@ -23,7 +23,7 @@ jobs:
           branch: release/1.8
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.version }}
-    timeout-minutes: 120
+    timeout-minutes: 360
     env:
       BRANCH: ${{ matrix.branch }}
     steps:
