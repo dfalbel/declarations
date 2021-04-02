@@ -21,8 +21,8 @@ jobs:
           branch: release/1.7
         - version: v1.8
           branch: release/1.8
-    runs-on: ${{ matrix.version }}
-    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    name: ${{ matrix.version }}
     timeout-minutes: 120
     env:
       BRANCH: ${{ matrix.branch }}
