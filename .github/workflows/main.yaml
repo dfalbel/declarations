@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: ["master", "v1.9", "v1.11.0"]
+        version: ["master", "v1.9", "v1.11"]
         include:
         - version: master
           branch: master
