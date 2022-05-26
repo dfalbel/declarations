@@ -13,14 +13,14 @@ jobs:
       fail-fast: false
       matrix:
         os: ["macos-latest"]
-        version: ["master", "v1.8", "v1.9"]
+        version: ["master", "v1.9", "v1.11.0"]
         include:
         - version: master
           branch: master
-        - version: v1.8
-          branch: release/1.8
         - version: v1.9
           branch: release/1.9
+        - version: v1.11
+          branch: release/1.11
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.version }}
     timeout-minutes: 360
