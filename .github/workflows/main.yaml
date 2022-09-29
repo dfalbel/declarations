@@ -20,6 +20,8 @@ jobs:
           branch: release/1.9
         - version: v1.11
           branch: release/1.11
+        - version: v1.12
+          branch: release/1.12
     runs-on: "macos-latest"
     name: ${{ matrix.version }}
     timeout-minutes: 360
